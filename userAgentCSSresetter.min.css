@@ -1,0 +1,13 @@
+/*
+	Description: This CSS resets the user agent's default style settings, for more visual consistency.
+	Version: 0.1
+	Date of Release: March 2016
+	Author: Arthur Stenske
+	Author URL: http://arthurstenske.ch
+	Author Repository: https://github.com/CousCousPlayer
+
+	License: GNU GPL 2.0
+	License URL: http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+*/
+
+*,:focus{outline:0;-webkit-tap-highlight-color:transparent}*{padding:0;margin:0;list-style:none;text-decoration:none;border:0;zoom:1;-webkit-overflow-scrolling:touch;-webkit-transform:translateZ(0)}::selection{background-color:#eee;text-shadow:none}::-moz-selection{background-color:#eee;text-shadow:none}:focus{border:none;-webkit-focus-ring-color:transparent!important}::-moz-focus-inner{outline:0!important;border:none}:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}input{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:.000001em}img{width:100%;vertical-align:middle}a,h1,h2,h3,h4,h5,h6,li,p{-webkit-text-stroke:.008em;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;-webkit-font-feature-settings:"liga" 1;-moz-font-feature-settings:"liga" 1;-moz-font-feature-settings:"liga=1";-ms-font-feature-settings:"liga" 1;-o-font-feature-settings:"liga" 1;font-feature-settings:"liga" 1;font:inherit}

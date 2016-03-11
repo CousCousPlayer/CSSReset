@@ -1,0 +1,84 @@
+/*
+	Description: This CSS resets the user agent's default style settings, for more visual consistency.
+	Version: 0.1
+	Date of Release: March 2016
+	Author: Arthur Stenske
+	Author URL: http://arthurstenske.ch
+	Author Repository: https://github.com/CousCousPlayer
+
+	License: GNU GPL 2.0
+	License URL: http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	border: 0;
+	outline: none;
+	zoom: 1; /*zoom fixing for iOS Devices*/
+	-webkit-tap-highlight-color: transparent;
+	-webkit-overflow-scrolling: touch; /** giving scroll values on iOS devices.*/
+	-webkit-transform: translateZ(0px); /* fixes position fixed bug on chrome.*/
+}
+
+*::selection {
+	background-color: #eeeeee;
+	text-shadow: none;
+}
+
+*::-moz-selection {
+	background-color: #eeeeee;
+	text-shadow: none;
+}
+
+*:focus {
+	outline: none;
+	outline: 0;
+	border: none;
+	-webkit-tap-highlight-color: transparent; /*for most android versions*/
+	-webkit-focus-ring-color: transparent !important;  /*Fallback for other android devices. 
+	the first seems kind of not working properly on all android devices. 
+	For more information see: http://goo.gl/m7MOV6*/
+}
+
+*::-moz-focus-inner { /*removes the dotted outline when focusing on an element in firefox*/
+	outline: none !important;
+	outline: 0;
+	border: none;
+}
+
+*:-moz-focusring { /*sets as fallback for removing the dotted outline when focusing on an element in firefox*/
+    color: transparent;
+    text-shadow: 0 0 0 #000000;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .000001em; /* it's not working in safari when defining a value of 0.*/
+}
+
+img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, li{
+	-webkit-text-stroke: 0.008em; /*fixes less readable text on -webkit browser for a more smoothing text*/
+	-webkit-font-smoothing: antialiased; /*fixes the common font rendering issue on Safari 6+. See http://goo.gl/01edif for more information in detail*/
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility; /*fixes the common font rendering issue on Safari 6+. See http://goo.gl/01edif for more information in detail*/
+	-webkit-font-feature-settings: "liga" 1; /*the text-rendering attribute is kind of buggy. font-feature-settings is used as fallback. And yes you can change the kering on fonts it is not fixed*/
+	-moz-font-feature-settings: "liga" 1;
+	-moz-font-feature-settings: "liga=1"; /*for older versions of firefox*/
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga" 1;
+	font-feature-settings: "liga" 1;
+	font-weight: normal; /*to keep the content inside the <h> tags at the defined font-weight*/
+	font-size: 100%;
+	font: inherit;
+}
